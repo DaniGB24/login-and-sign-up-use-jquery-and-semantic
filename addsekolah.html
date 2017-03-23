@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Add Data Sekolah Community</title>
+  <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/form.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/input.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/message.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
+
+  <script src="assets/library/jquery.min.js"></script>
+  <script src="../dist/components/form.js"></script>
+  <script src="../dist/components/transition.js"></script>
+
+  <style type="text/css">
+    body {
+            background-color: #3D5229;
+    }
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+  </style>
+
+
+<script>
+  $(document)
+    .ready(function() {
+      $('.ui.dropdown').dropdown();
+      $('.ui.form')
+        .form({
+          fields: {
+            email: {
+              identifier  : 'email',
+              rules: [
+                {
+                  type   : 'email',
+                  prompt : 'Masukkan Email Dengan Benar'
+                },
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan Email Anda'
+                }
+              ]
+            },
+
+              username: {
+              identifier  : 'username',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan Username Anda'
+                }
+
+              ]
+            },
+
+            nama_sekolah: {
+              identifier  : 'nama_sekolah',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'isikan Nama Sekolah anda'
+                }
+              ]
+            },
+            
+            npsn: {
+              identifier  : 'npsn',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan NPSN Anda'
+                },
+                {
+                  type   : 'length[8]',
+                  prompt : 'Masukkan NPSN 8 angka'
+                }
+              ]
+            },
+
+            status: {
+              identifier  : 'status',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan status Anda'
+                }
+              ]
+            },
+
+            namadepan: {
+              identifier  : 'jenjang',
+              rules: [
+                {
+                  type   : 'jenjang',
+                  prompt : 'Isikan jenjang Anda'
+                }
+              ]
+            },
+
+            namadepan: {
+              identifier  : 'namadepan',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan Nama Depan Anda'
+                }
+              ]
+            },
+            namabelakang: {
+              identifier  : 'namabelakang',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan Nama Belakang Anda'
+                }
+              ]
+            },
+            alamat: {
+              identifier  : 'alamat',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan Alamat Anda'
+                }
+              ]
+            },
+            
+            umur: {
+              identifier  : 'umur',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan Umur Anda'
+                },
+                {
+                  type   : 'number',
+                  prompt : 'Isikan Umur Anda Dengan Benar'
+                }
+              ]
+            },
+            
+          
+            hobby: {
+              identifier  : 'hobby',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Isikan hobby Anda'
+                }
+              ]
+            },
+
+
+
+            agama: {
+              identifier  : 'agama',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Pilih salah satu Agama Anda'
+                }
+              ]
+            },
+            
+            status: {
+              identifier  : 'status',
+              rules: [                
+                {
+                  type   : 'empty',
+                  prompt : 'Pilih Salah Satu Status'
+                }
+              ]
+            },
+
+            hakakses: {
+              identifier  : 'hakakses',
+              rules :[
+                {
+                  type    : 'empty',
+                  prompt  : 'Pilih Hak Akses Anda'
+               }
+              ]
+            }            
+          }
+        })
+      ;
+    })
+  ;
+  </script>
+  
+</head>
+<body >
+
+<div class="ui middle aligned center aligned grid">
+  
+    <div style="background-color:#fff ; height: auto; width: 400px ; opacity: 0.8 ; margin-top: 100px; padding: 0px ; 
+                border-radius: 8px" >
+
+        <div style="background-color: #00C9FF;height: 150px; width: 100% ;border-radius: 8px">
+          <div align="center">
+            <img src="images/cat.png" style="width: 65px; height: 50px ; opacity:1 ; margin-top:35px  ">
+             <h2 style="margin-top: 10px; color: #fff ;" >   
+                Tambah data Sekolah
+             </h2>
+           </div>
+
+
+        </div>
+
+       <form class="ui large form" action="addsekolah.php" method="post" style="margin-left: 15px; margin-right: 15px" >
+        <div class="field" style="margin-top: 20px"> 
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="text" name="npsn" placeholder="NPSN">
+          </div>
+        </div>
+
+        <div class="field" style="margin-top: 20px" >
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="nama_sekolah" placeholder="Nama Sekolah">
+          </div>
+         </div>
+
+         <div class="ui selection dropdown" style="width: 370px">
+            <input type="hidden" name="status">
+            <i class="dropdown icon"></i>
+          <div class="default text">Status sekolah</div>
+            <div class="menu">
+              <div class="item">Swasta</div>
+              <div class="item">Negeri</div>
+            </div>
+      </div>
+
+      <div class="ui selection dropdown" style="width: 370px; margin-top: 20px; margin-bottom: 20px">
+            <input type="hidden" name="jenjang">
+            <i class="dropdown icon"></i>
+          <div class="default text">Jenjang</div>
+            <div class="menu">
+              <div class="item">SD</div>
+              <div class="item">SMP</div>
+              <div class="item">SMA</div>
+              <div class="item">SMK</div>
+            </div>
+      </div>
+
+         
+
+     <center>
+          <div style="color: #fff" class="ui fluid large teal submit button" >Add Akun</div>
+     </center>
+
+   
+      <div class="ui error message"></div>
+
+       </form>
+       <center>
+         <div class="ui message" style="  margin-left:15px; margin-right: 15px ; margin-top: 30px; " >
+        ^(-_-)^</a>
+      </div>
+       </center>
+       
+
+
+        
+    </div>
+   
+
+</div>
+
+
+</body>
+
+</html>

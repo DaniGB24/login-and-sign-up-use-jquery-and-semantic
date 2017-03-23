@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Cat Community</title>
+  <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/form.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/input.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/message.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
+
+  <script src="assets/library/jquery.min.js"></script>
+  <script src="../dist/components/form.js"></script>
+  <script src="../dist/components/transition.js"></script>
+
+  <style type="text/css">
+    body {
+    }
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+  </style>
+  <script>
+  $(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            username: {
+              identifier  : 'username',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Masukkan username anda'
+                },
+              ]
+            },
+            password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Masukkan password anda'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : 'Password anda harus lebih dari 6 karakter'
+                }
+              ]
+            }
+          }
+        })
+      ;
+    })
+  ;
+  </script>
+</head>
+<body >
+
+<div class="ui middle aligned center aligned grid" style="background-image: url(images/background.png); 
+      background-repeat: no-repeat; background-size: 100% auto">
+  
+    <div style="background-color:#fff ; height: 340px; width: 400px ; opacity: 0.8 ; margin-top: 100px; padding: 0px ; 
+                border-radius: 8px" >
+
+        <div style="background-color: #00C9FF;height: 150px; width: 100% ;border-radius: 8px">
+          <div align="center">
+            <img src="images/cat.png" style="width: 65px; height: 50px ; opacity:1 ; margin-top:35px  ">
+             <h2 style="margin-top: 10px; color: #fff ;" >   
+                Masuk ke Akun
+             </h2>
+           </div>
+
+
+        </div>
+
+  	   <form class="ui large form" action="login.php" method="post" style="margin-left: 15px; margin-right: 15px">
+        <div class="field" style="margin-top: 20px" >
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="username" placeholder="Username">
+          </div>
+         </div>
+
+         <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+
+     <center>
+          <div style="color: #fff" class="ui fluid large teal submit button">Masuk</div>
+     </center>
+
+   
+      <div class="ui error message"></div>
+
+       </form>
+
+
+       <div class="ui message" style="margin-left:15px; margin-right: 15px ; margin-top: 30px">
+        Belum Punya akun? <a href="signup.html">Daftar</a>
+      </div>
+        
+    </div>
+   
+
+</div>
+
+
+</body>
+
+</html>
